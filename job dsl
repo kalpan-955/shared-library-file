@@ -1,1 +1,16 @@
+pipelineJob('job-dsl-plugin') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/kalpan-955/shared-library-file.git')
+                    }
+                    branch('master')
+                }
+            }
+            scriptPath('Jenkinsfile')
+        }
+    }
+}
 
